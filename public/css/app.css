@@ -6643,7 +6643,13 @@ button.bg-warning:hover,
 button.bg-warning:focus {
   background-color: #ffe817 !important;
 }
-
+.bg-img{
+  background: url('../img/bg-index2.jpg') no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
 .bg-danger {
   background-color: #e3342f !important;
 }
@@ -10514,8 +10520,16 @@ body {
 }
 
 .carousel-item img {
-  height: 400px;
+  height: 600px;
   width: 100%;
+}
+
+.rounded-corners-3 {
+  border-radius: 3em;
+}
+
+.rounded-corners-1 {
+  border-radius: 1em;
 }
 
 footer {
@@ -10537,7 +10551,7 @@ footer > div {
   align-items: center;
 }
 
-.margin-bot {
+.margin-top {
   margin-top: 20px;
 }
 
@@ -10550,6 +10564,113 @@ footer > div {
 }
 
 .box-shadow {
-  box-shadow: 15px #db1414;
+  box-shadow: 15px black;
 }
 
+h1 {
+  color: #111;
+  font-family: Nunito, "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  margin: 1em;
+}
+
+h2 {
+  color: #111;
+  font-family: Nunito, "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 72px;
+  text-align: center;
+}
+
+p {
+  color: #685206;
+  font-family: Nunito, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.nav-item,
+left-nav {
+  
+  font-family: Nunito, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fix {
+  position: fixed;
+  top: 10em;
+}
+
+.good-border {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bottom-padding {
+  margin-bottom: 10em;
+}
+
+#left-nav {
+  margin: 0px;
+  padding: 1rem;
+}
+
+#left-nav a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#left-nav a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+
+@media (max-width: 1208px) {
+
+  #col-left {
+    display: none;
+  }
+
+  #col-right {
+    width: 100%;
+    margin: auto;
+  }
+}
+.offuscate{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+#title{
+  margin: 0;
+  padding-top: 1.5em;
+  color: white;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.7);
+  font-size: 4em;
+  font-weight: bolder;
+  font: 700 80px 'Bitter';
+}
+#subtitle{
+  margin: 0;
+  padding-top: 2em;
+  color: white;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.7);
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+header{
+  height: 19%;
+}
+main{
+  height: 81%;
+}

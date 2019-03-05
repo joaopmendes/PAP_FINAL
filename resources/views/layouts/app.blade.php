@@ -17,25 +17,35 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{{ asset('img/logo_without_text.png') }}}">
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
 
 </head>
 <body>
 
         <header>
-            @component('component.navbar', ['current'=>$current])
+            @component('component.navbar', ['current'=>$current, 'nav_fixed'=>$nav_fixed])
                 
             @endcomponent
         </header>
 
-        <main>
+        <main >
             @yield('content')
         </main>
-        <footer>
+        
 
-            @yield('footer')
-        </footer>
+            @hasSection ('footer')
+            <footer>
+                @yield('section')
+            </footer>
+            @else
+            @endif('footer')
+
     </div>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            @yield('scripts')
+    </script>
 </body>
 </html>

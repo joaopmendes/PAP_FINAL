@@ -1,4 +1,4 @@
-@extends('layouts.app', ['current'=>'index'])
+@extends('layouts.app', ['current'=>'index' , 'nav_fixed'=>'false'])
 
 
 @section('title')

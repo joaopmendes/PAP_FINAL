@@ -1,4 +1,4 @@
-<div class="container-fluid margin-bot box-shadow flex-container flex-center">
+<div class="container-fluid margin-bot box-shadow flex-container flex-center ">
   <div id="carrousel_show_views" class="carousel slide" data-ride="carousel">
       
           <ol class="carousel-indicators">
@@ -11,7 +11,7 @@
               <li data-target="#carrousel_show_views" data-slide-to="6"></li>
 
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner rounded-corners">
               <div class="carousel-item active">
                 <img class="" src="{{ asset('img/curaMD.jpg')}}" alt="First slide">
               </div>
@@ -36,6 +36,7 @@
               <div class="carousel-item ">
                   <img class="" src="{{ asset('img/theta.jpg')}}" alt="eighty slide">
               </div>
+              
             </div>
             <a class="carousel-control-prev" href="#carrousel_show_views" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -45,6 +46,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+            
       </div>
         
 </div>

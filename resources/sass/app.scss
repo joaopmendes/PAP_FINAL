@@ -1,60 +1,148 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+html,
+body,
+header,
+main {
+    width: 100%;
+}
 
-html, body, header, main{
-  width: 100%;
+html,
+body {
+    height: 100%;
 }
-html, body{
-  height: 100%;
-}
+
 .carousel {
-  width:80%;
-  height:80%;
+    width: 80%;
+    height: 80%;
 }
-.carousel-item{
-  height: 100%;
-  width: 100%;
-} 
-.carousel-item img{
-  height: 400px;
-  width: 100%;
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
 }
-footer{
-  width: 100%;
-  height: 100px;
-  
+
+.carousel-item img {
+    height: 600px;
+    width: 100%;
 }
-footer > div{
-  width: inherit;
-  height: inherit;
+.rounded-corners-3{
+    border-radius: 3em;
 }
+.rounded-corners-1{
+    border-radius: 1em;
+}
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+footer>div {
+    width: inherit;
+    height: inherit;
+}
+
 .flex-container {
-  display: flex;
+    display: flex;
 }
 
-.flex-center{
-  justify-content: center;
-  align-items: center;
+.flex-center {
+    justify-content: center;
+    align-items: center;
 }
 
-.margin-bot{
-  margin-top: 20px;
-}
-.margin-bot{
-  margin-bottom: 20px;
+.margin-top {
+    margin-top: 20px;
 }
 
-.underline{
-  text-decoration: underline;
+.margin-bot {
+    margin-bottom: 20px;
 }
 
-.box-shadow{
-  box-shadow: 15px rgb(0, 0, 0);
+.underline {
+    text-decoration: underline;
+}
+
+.box-shadow {
+    box-shadow: 15px rgb(0, 0, 0);
+}
+
+h1 {
+    color: #111;
+    font-family: Nunito, 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    margin: 1em;
+}
+
+h2 {
+    color: #111;
+    font-family: Nunito, 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 0 0 72px;
+    text-align: center;
+}
+p {
+    color: #685206;
+    font-family: Nunito, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.nav-item, left-nav{
+    font-family: Nunito, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+.fix{
+    position: fixed;
+    top: 10em;
+}
+
+.good-border{
+    border: 1px solid rgba($color: #000000, $alpha: 0.5);
+}
+
+.bottom-padding{
+    margin-bottom: 10em;
+}
+
+#left-nav{
+    margin: 0px;
+    padding: 1rem;
+}
+#left-nav a{
+    color: rgba($color: #000000, $alpha: 0.5);
+
+}
+#left-nav a:hover{
+    color: rgba($color: #000000, $alpha: 0.5);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media (max-width: 1208px){
+    #col-left{
+        display: none;
+    }
+    #col-right{
+        width: 100%;
+        margin: auto;
+    }
 }

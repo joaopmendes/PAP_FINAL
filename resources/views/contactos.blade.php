@@ -1,4 +1,4 @@
-@extends('layouts.app', ['current'=>'contactos'])
+@extends('layouts.app', ['current'=>'contactos', 'nav_fixed'=>'true'])
 
 
 @section('title')

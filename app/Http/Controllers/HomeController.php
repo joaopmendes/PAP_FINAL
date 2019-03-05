@@ -21,6 +21,10 @@ class HomeController extends Controller
     {
         return view('index');
     }
+    public function indexTemp()
+    {
+        return view('index2');
+    }
     public function terapias()
     {
         return view('terapias');
@@ -28,6 +32,10 @@ class HomeController extends Controller
     public function contactos()
     {
         return view('contactos');
+    }
+    public function workshops()
+    {
+        return view('workshops');
     }
 
 }

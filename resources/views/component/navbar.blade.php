@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light @if($nav_fixed == 'true') fixed-top @endif"  style="background : rgba(0, 0, 0, 0.5)">
   <div class="container">
       <a class="navbar-brand" rel="home" href="{{ route('home')}}" title="Clinica de Ser">
           <img style="max-width:100px; margin-top: -7px;"src="{{ asset('img/logo.png') }}">
@@ -11,32 +11,45 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link @if ($current == 'index')
-            active underline
+            active 
           @endif" href="{{ route('home')}}">Home  
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link @if ($current == 'terapias')
-            active underline
-          @endif" href="{{ route('terapias')}}" >Terapias</a>
+
+            <div class="dropdown open">
+              <a class="dropdown-toggle nav-link" type="" style="cursor: pointer;" id="serviceDropdown" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                    Serviços
+              </a>
+              <div class="dropdown-menu" aria-labelledby="serviceDropdown">
+                  <a class="dropdown-item nav-link @if ($current == 'terapias')
+                  active-button 
+                @endif" href="{{ route('terapias')}}" >Terapias</a>
+                <a class="dropdown-item nav-link @if ($current == 'workshops')
+                  active-button 
+                @endif" href="{{ route('workshops')}}" >Workshops</a>
+
+              </div>
+            </div>
           </li>
+
+
+            
           <li class="nav-item">
             <a class="nav-link @if ($current == 'blog')
-            active underline
-          @endif" href="#">Blog</a>
+            active 
+          @endif" href="{{ route('blog') }}">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link @if ($current == 'contactos')
-            active underline
+            active 
           @endif" href="{{ route('contactos')}}">Contactos 
               
             </a>
           </li>
         </ul>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        
       </div>
   </div>
   

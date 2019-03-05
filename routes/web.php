@@ -13,11 +13,13 @@
 
 
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@indexTemp')->name('home');
+//Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contactos', 'HomeController@contactos')->name('contactos');
 Route::get('/terapias', 'HomeController@terapias')->name('terapias');
 Route::get('/workshops', 'HomeController@workshops')->name('workshops');
 Route::resource('blog', 'BlogController');
+Route::get('blog','BlogController@index')->name('blog');
 
 
 

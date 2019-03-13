@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app', ['current'=>'blog', 'nav_fixed' => 'false'])
+
 
 @section('content')
 <div class="container">

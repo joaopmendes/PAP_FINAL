@@ -7,5 +7,7 @@
 
 
 @section('content')
-    <h1 class="text-center text-danger">Not Implemented yet</h1>
+    @component('component.carrousel')
+        
+    @endcomponent
 @endsection

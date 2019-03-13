@@ -29,9 +29,9 @@ class HomeController extends Controller
     {
         return view('terapias');
     }
-    public function contactos()
+    public function sobre()
     {
-        return view('contactos');
+        return view('sobre');
     }
     public function workshops()
     {

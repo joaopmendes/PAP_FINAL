@@ -22,32 +22,56 @@
                   aria-expanded="false">
                     Serviços
               </a>
-              <div class="dropdown-menu" aria-labelledby="serviceDropdown">
+              <div class="dropdown-menu text-center" aria-labelledby="serviceDropdown">
                   <a class="dropdown-item nav-link @if ($current == 'terapias')
-                  active-button 
+                  active
                 @endif" href="{{ route('terapias')}}" >Terapias</a>
                 <a class="dropdown-item nav-link @if ($current == 'workshops')
-                  active-button 
+                  active
                 @endif" href="{{ route('workshops')}}" >Workshops</a>
 
               </div>
             </div>
           </li>
-
-
-            
           <li class="nav-item">
             <a class="nav-link @if ($current == 'blog')
             active 
           @endif" href="{{ route('blog') }}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link @if ($current == 'contactos')
+            <a class="nav-link @if ($current == 'sobre')
             active 
-          @endif" href="{{ route('contactos')}}">Contactos 
+          @endif" href="{{ route('sobre')}}">Sobre 
               
             </a>
           </li>
+            @auth
+              <ul class="top-right list-inline">
+                <li class="nav-item">
+                    <div class="dropdown open">
+                        <a class="dropdown-toggle nav-link" type="" style="cursor: pointer;" id="serviceDropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="">
+                              {{Auth::user()->name}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="serviceDropdown">
+                            <a class="dropdown-item nav-link" href="/logout">Logout</a>
+          
+                        </div>
+                      </div>
+                </li>
+              </ul>
+            @endauth
+            @guest
+              <ul class="top-right list-inline">
+                <li class="nav-item">
+                    <a href="{{route('login')}}" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item" id="registerButton">
+                    <a href="{{route('register')}}" class="nav-link">Register</a>
+                </li>
+              </ul>
+            @endguest
+           
         </ul>
         
       </div>

@@ -6650,6 +6650,27 @@ button.bg-warning:focus {
   background-size: cover;
   height: 100%;
 }
+.bg-sobre{
+  background: url('../img/clean.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+header{
+  z-index: 3;
+  position: relative;
+}
+.show ul{
+  position: initial;
+  right: 0;
+  display:block;
+  text-align: center;
+}
+.show #registerButton{
+  margin-left: 1em;
+}
+
 .bg-danger {
   background-color: #e3342f !important;
 }
@@ -10577,7 +10598,14 @@ h1 {
   text-align: center;
   margin: 1em;
 }
-
+.navbar-collapse{
+  transition: initial;
+}
+.dropdown-item:active:focus{
+  box-shadow: none;
+  color: none;
+  background: none;
+}
 h2 {
   color: #111;
   font-family: Nunito, "Open Sans", sans-serif;
@@ -10596,6 +10624,17 @@ p {
   margin: 0 0 24px;
   text-align: justify;
   text-justify: inter-word;
+}
+.text{
+  color: white;
+  font-family: Nunito, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top:3em
+
 }
 
 .nav-item,
@@ -10649,6 +10688,12 @@ left-nav {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
+.offuscate-80{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
 #title{
   margin: 0;
@@ -10673,4 +10718,19 @@ header{
 }
 main{
   height: 81%;
+}
+
+.top-right {
+  position: absolute;
+  right: 7.3em;
+}
+.top-right li{
+  display: inline-block;
+}
+.dropdown-item.active{
+  background-color: white;
+  color: black !important; 
+}
+.dropdown-item{
+  color: rgba(0, 0, 0, 0.5) !important;
 }

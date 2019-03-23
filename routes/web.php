@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +17,10 @@
 
 
 
-Route::get('/', 'HomeController@indexTemp')->name('home');
-//Route::get('/', 'HomeController@index')->name('home');
-Route::get('/sobre', 'HomeController@sobre')->name('sobre');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/contactos', 'HomeController@contactos')->name('contactos');
 Route::get('/terapias', 'HomeController@terapias')->name('terapias');
 Route::get('/workshops', 'HomeController@workshops')->name('workshops');
-Route::resource('blog', 'BlogController');
-Route::get('blog','BlogController@index')->name('blog');
 
 
 
@@ -28,6 +29,18 @@ Route::get('/call/{command}', function($command) {
     return  Artisan::call($command);
 });
 Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/logout', function(){
     return redirect('/')->with(Auth::logout());
 });
+
+Route::get('blog','BlogController@index')->name('blog');
+Route::resource('blog', 'BlogController');
+Route::post('/blog/search', 'BlogController@search')->name('search');
+Route::POST('blog/{blog}','BlogController@update')->name('update')->middleware('admin');
+
+//only for admin
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('dashboard', 'AdminController@index')->name('dashboard');
+});
+

@@ -21,25 +21,25 @@
                 </div>
                 <div class="col-md-9" id="col-right">
                         <h1 class="text-center" id = "naturopatia">NATUROPATIA</h1>
-                        <p class="text-muted">Segundo a Portaria n.º 207-A/2014, a Naturopatia:</p> 
+                        <p class="text-muted">Segundo a Portaria n.º 207-A/2014, a Naturopatia:</p>
                         <p>(...)é a terapêutica que estuda as propriedades e aplicações dos elementos naturais, a fim de prevenir a doença e manter, promover e restaurar a saúde, recorrendo ainda ao aconselhamento dietético naturopático e à orientação sobre estilos de vida e utilizando a fitoterapia, a homeopatia, a hidroterapia, a geoterapia, as terapias da manipulação e outros métodos afins.
                         </p>
                         <p>São utilizadas diversas técnicas de diagnóstico, tanto ocidentais como orientais, e métodos que se baseiam no uso de produtos alimentares, plantas medicinais e seus derivados.
                         </p>
-                        
+
                         <h3>Princípios base</h3>
-                        
+
                         <p>
                         Educar os pacientes e dar enfâse à autorresponsabilização para a saúde, através de um cuidado com o seu próprio corpo, atenção a sinais e a promoção da autocura.
-                        
+
                         Poder da cura pela Natureza. Identificação e tratamento das causas sem eliminar apenas os sintomas mas focando-se nas causas, eliminando assim o desequilíbrio e promovendo a autocura do paciente.
-                        
+
                         Não causar nenhum prejuízo. São utilizados métodos e substâncias medicinais naturais que minimizem ao máximo o risco de efeitos secundários tanto para diagnosticar a doença como para favorecer a recuperação da saúde. Sempre que possível a supressão e sintomas é evitada, porque interfere com o processo de cura.
-                        
+
                         Tratamento do paciente como um todo. Saúde e doença resultam da influência e interação de um conjunto de fatores que podem ser físicos, mentais, emocionais, ambientais, genéticos, sociais e outros como a saúde em plenitude inclui igualmente saúde espiritual, o Naturopata incentiva a que se prossiga com o desenvolvimento espiritual.
-                        
+
                         Prevenção. A prevenção da doença e o alcance da saúde em plenitude no paciente são os objetivos principais da medicina naturopática. Estes objetivos são atingidos através da educação e da promoção de hábitos de vida saudáveis. Ninguém pode ser saudável num ambiente não saudável.
-                        
+
                         Deixe o seu alimento ser o seu medicamento.
                         </p>
                         <h1 class="text-center" id="cura_multidimensional">CURA MULTIDIMENSIONAL</h1>
@@ -51,7 +51,7 @@
                         </h1>
                         <p>
                         Reiki é uma terapia complementar, no âmbito das Terapias e Medicinas de Campo Bio Energético, na qual o Reiki está inserido segundo o conceito da NCCAM National Center for Complementary and Alternative Medicine, que é uma Agência dos EUA, dedicada à explicação rigorosa sob o prisma da ciência, das Medicinas Complementares e Alternativas.
-                        
+
                         Esta terapia é realizada através de um toque suave ou a uma curta distância do corpo do paciente, seguindo um rigorosocódigo de ética, sendo transmitida a Energia Universal (Reiki) para as zonas mais necessitadas da pessoa. Esta é uma terapia complementar, ou seja, trabalha em conjunto com todas as Medicinas e outras Terapias, nunca invalidando ou substituindo qualquer uma delas.
                         Energia Universal (Rei = Universal, Ki = energia)
                         </p>
@@ -68,10 +68,10 @@
                         </h1>
                         <p>
                         A Radiónica Multidimensional baseia-se nos princípios da radiestesia, radiónica,conceitos de auto e inter perdões, transmutações de energias , desbloqueios de padrões e crenças e das geometrias sagradas, possibilitando a limpeza, equilíbrio e harmonização de pessoas (eu interior), situações, ambientes e relações. Esta estabelece e/pu possibilita a reconexao com o nosso EU SUPERIOR, permitindo o contacto com a nossa verdadeira Essência , caminho Divino e missão.A Mesa Radiónica Multidimensional trabalha em/com frequências elevada ( Seres de luz de elevadíssima frequência) possibilitando grandes mudanças a todos os níveis do Ser. Desta forma, o nosso Eu Superior reconhecerá e reorganizará todo o nosso caminho com base no caminho Divino de cada um nós, levando-nos ao encontro das soluções Divinas para a nossa vida.
-                        
-                        
+
+
                         </p>
-                    
+
                         <p>Algumas situações tratadas com esta terapia / ferramenta:</p>
                         <ul>
                             <li><p>limpar, desbloquear, harmonizar o ambiente em redor do proprio ( edifícios incluídos)</p></li>
@@ -85,14 +85,14 @@
                                 Desta forma, é indicado em TODOS os casos, principalmente em casos como a Depressão, Fobias e Medos, Síndrome do Pânico, Dores Físicas, Alergias, Fibromialgia, Enxaqueca, Ansiedade e Angústia, Rinite, Distúrbios do Sono como insônia, estresse, entre outros. Além de promover uma cura interna, proporciona elevação de consciência e uma reconstrução no íntimo de cada pessoa identificando e mudando Crenças, Sensações, Traumas Emocionais e Padrões Bloqueadores que estão nos limitando de fluir e alcançar algum objetivo de Vida, seja no plano físico, de trabalho, familiar, amoroso, pessoal e principalmente espiritual, abrangendo todas as áreas de nossas vidas.
                         </p>
                 </div>
-            
-        </div>  
+
+        </div>
     </div>
 </div>
 
 
   @endsection
-  
+
   @section('scripts')
 
   $(document).on('click', 'a[href^="#"]', function(e) {
@@ -112,8 +112,8 @@
     var pos = $id.offset().top;
 
     // animated top scrolling
-    $('body, html').animate({scrollTop: pos - 250});
+    $('body, html').animate({scrollTop: pos - 150});
 });
-      
+
 
   @endsection

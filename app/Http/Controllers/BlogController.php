@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\BlogPost;
+use App\Blogpost;
+use Illuminate\Database\QueryException;
 
 class BlogController extends Controller
 {
@@ -12,9 +13,14 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('admin', ['except' => ['index', 'search', 'show']]);
+    }
     public function index()
     {
-        $blogPosts = BlogPost::all();
+        $blogPosts = Blogpost::orderBy('id', 'desc')->paginate(5);
         return view('blog.index')->with('blogPosts', $blogPosts);
     }
 
@@ -23,9 +29,9 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() //Only Admin
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -36,7 +42,30 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'bail|required|max:255',
+            'message'=>'required',
+            'published_at'=>'nullable|date',
+            'updated_at'=>'nullable|date',
+        ]);
+
+
+        $post = new BLogpost;
+        $post->title = $request->title;
+        $post->message = $request->message;
+
+
+        try {
+            $post->save();
+        } catch (QueryException $th) {
+            return view('blog.create', ['message'=> 'O Campo Titulo já está em uso.']);
+        }
+
+
+
+        return redirect('blog');
+
+
     }
 
     /**
@@ -47,7 +76,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Blogpost::findOrFail($id);
+        return view('blog.show', compact('post'));
     }
 
     /**
@@ -58,7 +88,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Blogpost::findOrFail($id);
+        return view('blog.edit')->with('post', $post);
     }
 
     /**
@@ -70,7 +101,22 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title'=>'bail|required|max:255',
+            'message'=>'required'
+        ]);
+        $post = Blogpost::findOrFail($id);
+        $post->title = $request->title;
+        $post->message = $request->message;
+
+        try {
+            $post->save();
+        } catch (QueryException $th) {
+            return view('blog.edit', ['message'=> 'O Campo Titulo já está em uso.'])->with('post', $post);;
+        }
+
+        return redirect('blog');
+
     }
 
     /**
@@ -81,6 +127,13 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Blogpost::findOrFail($id)->delete();
+        return redirect(route('blog.index'));
+
+    }
+    public function search(Request $request)
+    {
+        $blogPosts = Blogpost::where('title','LIKE','%'.$request->search_string.'%')->orWhere('message','LIKE','%'.$request->search_string.'%')->orderBy('id', 'desc')->paginate(5);
+        return view('blog.index')->with('blogPosts', $blogPosts);
     }
 }

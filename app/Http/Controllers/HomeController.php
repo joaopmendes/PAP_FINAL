@@ -19,19 +19,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
-    }
-    public function indexTemp()
-    {
         return view('index2');
     }
     public function terapias()
     {
         return view('terapias');
     }
-    public function sobre()
+    public function contactos()
     {
-        return view('sobre');
+        return view('contactos');
     }
     public function workshops()
     {

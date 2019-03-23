@@ -6652,10 +6652,8 @@ button.bg-warning:focus {
 }
 .bg-sobre{
   background: url('../img/clean.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+  width: 100vw;
+  background-size: cover
 }
 header{
   z-index: 3;
@@ -10628,7 +10626,7 @@ p {
 .text{
   color: white;
   font-family: Nunito, "Helvetica Neue", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   margin: 0 0 24px;
   text-align: justify;
@@ -10639,7 +10637,7 @@ p {
 
 .nav-item,
 left-nav {
-  
+
   font-family: Nunito, "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -10693,6 +10691,11 @@ left-nav {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
+.offuscate-30{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
 
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
 #title{
@@ -10706,7 +10709,7 @@ left-nav {
 }
 #subtitle{
   margin: 0;
-  padding-top: 2em;
+  padding-tword-breakop: 2em;
   color: white;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.7);
   font-size: 1.5em;
@@ -10729,8 +10732,56 @@ main{
 }
 .dropdown-item.active{
   background-color: white;
-  color: black !important; 
+  color: black !important;
 }
 .dropdown-item{
   color: rgba(0, 0, 0, 0.5) !important;
+}
+.justify-content-center > ul{
+    width: 28em;
+}
+.justify-content-center{
+
+    display: flex !important;
+}
+.word-break{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100px;
+    max-width: 100px;
+}
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+    }
+    .active-pink input[type=text] {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+    }
+    .active-purple-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+    }
+    .active-purple input[type=text] {
+    border-bottom: 1px solid #ce93d8;
+    box-shadow: 0 1px 0 0 #ce93d8;
+    }
+    .active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    }
+    .active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    }
+    .search-bar, .search-bar:hover, .search-bar:focus{
+        border: 0;
+        background: rgba(0, 0, 0, 0);
+
+    }
+
+.not-justify-center{
+    justify-content: left;
 }

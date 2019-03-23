@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>@yield('title', 'ClinicaSer')</title>
 
     <!-- Scripts -->
 
@@ -17,7 +17,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{{ asset('img/logo_without_text.png') }}}">
-    
+
 
 
 </head>
@@ -25,14 +25,15 @@
 
         <header>
             @component('component.navbar', ['current'=>$current, 'nav_fixed'=>$nav_fixed])
-                
+
             @endcomponent
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         </header>
 
         <main >
             @yield('content')
         </main>
-        
+
 
             @hasSection ('footer')
             <footer>

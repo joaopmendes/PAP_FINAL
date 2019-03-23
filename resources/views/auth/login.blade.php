@@ -1,5 +1,8 @@
 @extends('layouts.app', ['current'=>'blog', 'nav_fixed' => 'false'])
 
+@section('title')
+    ClinicaSer | Login
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

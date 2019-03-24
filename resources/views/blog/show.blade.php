@@ -10,7 +10,7 @@
 
     <div class="container">
         <h1>{{ $post->title }}</h1>
-        <p class='word-break'>
+        <p >
             {{ $post->message }}
 
         </p>

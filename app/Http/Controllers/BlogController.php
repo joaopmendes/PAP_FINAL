@@ -16,11 +16,13 @@ class BlogController extends Controller
 
     public function __construct()
     {
-        $this->middleware('admin', ['except' => ['index', 'search', 'show']]);
+        $this->middleware('admin',
+                         ['except' => ['index', 'search_post', 'search_get', 'show']]);
     }
     public function index()
     {
-        $blogPosts = Blogpost::orderBy('id', 'desc')->paginate(5);
+        $blogPosts = Blogpost::orderBy('id', 'desc')
+                    ->paginate(10);
         return view('blog.index')->with('blogPosts', $blogPosts);
     }
 
@@ -131,9 +133,17 @@ class BlogController extends Controller
         return redirect(route('blog.index'));
 
     }
-    public function search(Request $request)
+    public function search_get($search_string)
     {
-        $blogPosts = Blogpost::where('title','LIKE','%'.$request->search_string.'%')->orWhere('message','LIKE','%'.$request->search_string.'%')->orderBy('id', 'desc')->paginate(5);
-        return view('blog.index')->with('blogPosts', $blogPosts);
+       $blogPosts = Blogpost::where('title','LIKE','%'. $search_string .'%')
+                            ->orWhere('message','LIKE','%'. $search_string .'%')
+                            ->orderBy('id', 'desc')
+                            ->paginate(10);
+       return view('blog.index')->with('blogPosts', $blogPosts);
+    }
+    public function search_post(Request $request){
+
+        $search_string = $request->search_string;
+        return redirect()->route('search_get', $search_string);
     }
 }

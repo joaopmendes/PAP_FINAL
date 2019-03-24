@@ -36,7 +36,11 @@ Route::get('/logout', function(){
 
 Route::get('blog','BlogController@index')->name('blog');
 Route::resource('blog', 'BlogController');
-Route::post('/blog/search', 'BlogController@search')->name('search');
+Route::get('/blog/search/{search_string}', 'BlogController@search_get')->name('search_get');
+
+Route::post('/search', 'BlogController@search_post')->name('search_post');
+
+
 Route::POST('blog/{blog}','BlogController@update')->name('update')->middleware('admin');
 
 //only for admin

@@ -51,7 +51,7 @@
                     @if ($current == 'blog')
                     <li class="nav-item " style="margin-right: 2em" >
                         <div class="md-form active-purple active-purple-2 mb-3 " >
-                            <form action="{{ route('search') }}" method='POST'>
+                            <form action="{{ route('search_post') }}" method='post'>
                                 @csrf
                                 <input class="form-control nav-link search-bar " id="search_string" name="search_string" type="text" placeholder="Procurar Post" aria-label="Search">
                             </form>
@@ -83,7 +83,7 @@
                 @if ($current == 'blog')
                     <li class="nav-item " style="margin-right: 2em" >
                         <div class="md-form active-purple active-purple-2 mb-3 " >
-                            <form action="{{ route('search') }}" method='POST'>
+                            <form action="{{ route('search_post') }}" method='POST'>
                                 @csrf
                                 <input class="form-control nav-link search-bar " id="search_string" name="search_string" type="text" placeholder="Procurar Post" aria-label="Search">
                             </form>

@@ -22,12 +22,12 @@
                         @foreach ($blogPosts as $post)
                                     <tr>
                                         <td scope="row">{{ $post->id }}</td>
-                                        <td style="width: 350px;" class="word-break">{{ $post->title }}</td>
+                                        <td>{{ $post->title }}</td>
                                         <td width=10% class="word-break" style="
                                         width:400px;">{{ $post->message }}</td>
                                         <td>{{ $post->created_at }}</td>
                                         <td class="flex-container flex-center not-justify-center">
-                                            <a id='show_redirect' href="{{ route('blog.show', [$post->id]) }} " style="margin:1em;"><i class="far fa-eye"></i></a>
+                                            <a href="{{ route('blog.show', [$post->id]) }} " style="margin:1em;"><i class="far fa-eye"></i></a>
                                             @auth
                                                @if(Auth::user()->admin == 'true')
                                                     <a href="{{ route('blog.edit', [$post->id]) }}">

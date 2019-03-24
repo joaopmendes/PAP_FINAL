@@ -57,12 +57,12 @@
             </div>
             {{-- Confirm Password --}}
                 <div class="form-group">
-                    <label for="password" style="font-size: 1.5em">Password</label>
-                    <input type="password" name="password" id="title_post" class="form-control" placeholder="Insira a palavra-pass do utilizador" aria-describedby="helpId">
+                    <label for="password_confirm" style="font-size: 1.5em">Password</label>
+                    <input type="password_confirm" name="password_confirm" id="title_post" class="form-control" placeholder="Insira a palavra-pass do utilizador" aria-describedby="helpId">
                     <small id="helpId" class="text-muted">Escreva a palavra-passe do utilizador que deseja criar.</small>
-                    @if ($errors->first('password'))
+                    @if ($errors->first('password_confirm'))
                         <div class="alert alert-danger" style='height: 2.5em; padding: 0.5em; '>
-                            {{ $errors->first('password') }}
+                            {{ $errors->first('password_confirm') }}
 
                         </div>
                         @endif

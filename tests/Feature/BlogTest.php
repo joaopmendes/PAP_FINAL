@@ -44,7 +44,7 @@ class BlogTest extends TestCase
     {
 
         $blog = factory(\App\Blogpost::class)->create();
-        $response = $this->followingRedirects()
+        $this->followingRedirects()
                          ->post(route('search_post'), ['search_string' => $blog->title])
                          ->assertSeeInOrder(
                             [
@@ -53,19 +53,5 @@ class BlogTest extends TestCase
 
                             ]
                          );
-    }
-    /**
-     * Creating a blog and if the user can click on the icon to see details of the post
-     *
-     * @return void
-     */
-    public function test_if_user_can_click_more_details_about_post()
-    {
-
-        $blog = factory(\App\Blogpost::class)->create();
-        $this->get(route('blog.index'))
-             ->click('<i class="fa fa-eye"></i>')
-             ->seePageIs(route('blog.show'), $blog->id);
-
     }
 }

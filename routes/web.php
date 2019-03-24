@@ -45,6 +45,8 @@ Route::POST('blog/{blog}','BlogController@update')->name('update')->middleware('
 
 //only for admin
 Route::group(['middleware' => ['admin']], function () {
-    Route::get('dashboard', 'AdminController@index')->name('dashboard');
+    Route::get('admin/dashboard', 'AdminController@index')->name('dashboard');
+    Route::get('admin/user', 'AdminController@create_user')->name('admin.user_form');
+    Route::post('admin/store', 'AdminController@store_user')->name('admin.store');
 });
 

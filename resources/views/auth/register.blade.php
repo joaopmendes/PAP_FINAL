@@ -1,4 +1,4 @@
-@extends('layouts.app', ['current'=>'blog', 'nav_fixed' => 'false'])
+@extends('layouts.app', ['current'=>'register', 'nav_fixed' => 'false'])
 
 @section('title')
     ClinicaSer | Registrar

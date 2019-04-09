@@ -13,7 +13,7 @@
             <a class="nav-link @if ($current == 'index')
             active
           @endif" href="{{ route('home')}}">Home
-            </a>
+        </a>
           </li>
           <li class="nav-item">
 
@@ -91,10 +91,14 @@
                     </li>
                   @endif
                 <li class="nav-item">
-                    <a href="{{ route('login')}}" class="nav-link">Fazer Login</a>
+                    <a href="{{ route('login')}}" class="nav-link @if ($current == 'login')
+                      active
+                    @endif">Fazer Login</a>
                 </li>
                 <li class="nav-item" id="registerButton">
-                    <a href="{{route('register')}}" class="nav-link">Registar-se</a>
+                    <a href="{{route('register')}}" class="nav-link @if ($current == 'register')
+                      active
+                    @endif">Registar-se</a>
                 </li>
               </ul>
             @endguest
@@ -105,4 +109,3 @@
   </div>
 
 </nav>
-

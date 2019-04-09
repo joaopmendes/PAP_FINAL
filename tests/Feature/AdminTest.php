@@ -31,7 +31,7 @@ class AdminTest extends TestCase
         $user = factory(\App\User::class)->create([
             'admin'=>'true',
         ]);
-        $response = $this->actingAs($user)->get('dashboard');
+        $response = $this->actingAs($user)->get(route('dashboard'));
 
         $response->assertStatus(200);
     }
@@ -47,7 +47,7 @@ class AdminTest extends TestCase
         $user = factory(\App\User::class)->create([
             'admin'=>'true',
         ]);
-        $response = $this->actingAs($user)->get('user_form');
+        $response = $this->actingAs($user)->get(route('admin.user_form'));
 
         $response->assertStatus(200);
     }
@@ -62,7 +62,7 @@ class AdminTest extends TestCase
         $user = factory(\App\User::class)->create([
             'admin'=>'false',
         ]);
-        $response = $this->actingAs($user)->get('user_form');
+        $response = $this->actingAs($user)->get(route('admin.user_form'));
 
         $response->assertStatus(302);
     }

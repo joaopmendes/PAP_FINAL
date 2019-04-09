@@ -49,7 +49,6 @@ class BlogTest extends TestCase
                             [
                                 $blog->title,
                                 $blog->message,
-
                             ]
                          );
     }

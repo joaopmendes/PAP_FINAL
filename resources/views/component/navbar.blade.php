@@ -91,10 +91,10 @@
                     </li>
                   @endif
                 <li class="nav-item">
-                    <a href="{{ route('login')}}" class="nav-link">Login</a>
+                    <a href="{{ route('login')}}" class="nav-link">Fazer Login</a>
                 </li>
                 <li class="nav-item" id="registerButton">
-                    <a href="{{route('register')}}" class="nav-link">Register</a>
+                    <a href="{{route('register')}}" class="nav-link">Registar-se</a>
                 </li>
               </ul>
             @endguest

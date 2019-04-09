@@ -1,13 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
+
 use Illuminate\Http\Request;
-
-
-
-=======
->>>>>>> 7963d4cb7f16b656a9abede94a7433becb8d63e3
 class AdminController extends Controller
 {
     public function index(){
@@ -29,7 +24,7 @@ class AdminController extends Controller
         $this->validate($req, [
             'name'=>'required',
             'email'=>'required| unique:users| email',
-            'password'=>'required',
+            'password'=>'required|confirmed|min:8',
             'administrador'=>'required',
             'published_at'=>'nullable|date',
             'updated_at'=>'nullable|date',

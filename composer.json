@@ -18,10 +18,6 @@
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "laravel/browser-kit-testing": "^5.1",
-<<<<<<< HEAD
-        "laravel/dusk": "^5.0",
-=======
->>>>>>> 7963d4cb7f16b656a9abede94a7433becb8d63e3
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^7.0"

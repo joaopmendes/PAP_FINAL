@@ -9,7 +9,7 @@
 @section('content')
     <div class="full-width full-height bg-img">
         <div class="offuscate">
-                <h1 id="title">Clínica de Ser</h1>
+                <h1 id="title">Clínica De Ser</h1>
                 <h2 id="subtitle">Sinta-se bem consigo mesmo</h2>
         </div>
 

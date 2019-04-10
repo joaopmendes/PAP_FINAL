@@ -10785,3 +10785,36 @@ main{
 .not-justify-center{
     justify-content: left;
 }
+
+#post_title{
+  background: 	#DAA520;
+  margin: 0;
+  padding: 1.5em 0;
+  color: white;
+}
+#post_text{
+  width: 80%;
+  margin: auto;
+  font-size: 15px;
+  margin-top: 3em;
+  color: black;
+  text-align: justify;
+}
+#comment-section{
+}
+#comment-section > *{
+  font-weight: 1em;
+}
+
+#comment{
+  width: 80%;
+  margin: auto;
+  font-size: 1.5em;
+  margin-top: 3em;
+  border-top: 1px solid #999;
+  padding-top: 1em;
+
+}
+#comment > p{
+  color: black;
+}

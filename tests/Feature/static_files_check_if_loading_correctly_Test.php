@@ -18,7 +18,7 @@ class static_files_check_if_loading_correctly extends TestCase
         $response = $this->get(route('home'));
 
         $response->assertStatus(200);
-        $response->assertSeeInOrder(['Clínica de Ser', 'Sinta-se bem consigo mesmo']);
+        $response->assertSeeInOrder(['Clínica De Ser', 'Sinta-se bem consigo mesmo']);
 
     }
     /**

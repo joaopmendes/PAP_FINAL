@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
                   ->unsigned();
             $table->unsignedInteger('user_id')
                   ->unsigned();
-            $table->string('comment');
+            $table->longText('comment');
             $table->timestamps();
         });
         Schema::table('comments', function (Blueprint $table){

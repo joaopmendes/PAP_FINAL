@@ -50,3 +50,6 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('admin/store', 'AdminController@store_user')->name('admin.store');
 });
 
+
+Route::post('/comment', 'ComentariosController@create')->name('comment_post');
+

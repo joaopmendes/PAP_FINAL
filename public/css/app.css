@@ -10797,24 +10797,42 @@ main{
   margin: auto;
   font-size: 15px;
   margin-top: 3em;
+  margin-bottom: 3em;
+
   color: black;
   text-align: justify;
 }
 #comment-section{
+  border-top: 1px solid #999;
+  width: 80%;
+  margin: auto;
+
 }
 #comment-section > *{
   font-weight: 1em;
+
 }
 
 #comment{
-  width: 80%;
-  margin: auto;
+
   font-size: 1.5em;
-  margin-top: 3em;
-  border-top: 1px solid #999;
   padding-top: 1em;
 
 }
-#comment > p{
+.card-body > p{
   color: black;
+  width: 100%;
+  padding-left: 2em;
+}
+
+
+#comment-text{
+    word-wrap: break-word;
+}
+
+#comment_input{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
 }

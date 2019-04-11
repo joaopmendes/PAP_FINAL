@@ -52,4 +52,4 @@ Route::group(['middleware' => ['admin']], function () {
 
 
 Route::post('/comment', 'ComentariosController@create')->name('comment_post');
-
+Route::get('/comment/delete/{comment_id}', 'ComentariosController@delete')->name('delete_comment');

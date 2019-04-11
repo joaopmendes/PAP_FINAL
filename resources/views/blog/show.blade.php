@@ -31,7 +31,7 @@
 
         </form>
 
-        @foreach ($post->comments as $comment)
+        @foreach ($comments as $comment)
         <div id=comment class="">
 
             <div class="card text-left">
@@ -47,7 +47,12 @@
 
         @endforeach
 
+
       </div>
+      <div id=links>
+        {{ $comments->links() }}
+      </div>
+
     </div>
   </div>
 @endsection

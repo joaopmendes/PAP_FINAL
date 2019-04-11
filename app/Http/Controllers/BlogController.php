@@ -79,7 +79,8 @@ class BlogController extends Controller
     public function show($id)
     {
         $post = Blogpost::findOrFail($id);
-        return view('blog.show', compact('post'));
+        $comments = \App\Comment::where('blog_id', $id)->orderBy('id', 'desc')->paginate(10);
+        return view('blog.show', compact('post', 'comments'));
     }
 
     /**

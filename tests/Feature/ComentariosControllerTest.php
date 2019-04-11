@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\blogpost;
 
 class ComentariosControllerTest extends TestCase
 {
@@ -31,8 +32,33 @@ class ComentariosControllerTest extends TestCase
             'user_id'=>$user->id,
             'comment'=>$comment_test
         ]);
+    }
+
+    public function teste_if_comentarios_are_being_deleted()
+    {
+        $table='comments';
+        $comment = factory(\App\Comment::class)->create();
+
+        $user = \App\User::find($comment->user->id);
 
 
+
+
+        $this->assertDatabaseHas($table, [
+            'blog_id' => $comment->blogpost->id,
+            'user_id' => $user->id,
+            'comment' => $comment->comment
+        ]);
+
+        $this->actingAs($user)->get(route('delete_comment', [
+            'comment_id'=>$comment->id
+        ]));
+
+        $this->assertDatabaseMissing($table,[
+            'blog_id' => $comment->blogpost->id,
+            'user_id' => $user->id,
+            'comment' => $comment->comment
+        ]);
 
 
 

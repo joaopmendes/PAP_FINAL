@@ -36,7 +36,18 @@
 
             <div class="card text-left">
               <div class="card-body">
-                    <h6 class="card-title">{{ $comment->user->name }} <small>{{ $comment->created_at->diffForHumans() }}</small></h6>
+                    <h6 class="card-title">{{ $comment->user->name }} <small>{{ $comment->created_at->diffForHumans() }}
+                        @auth
+                            @if ((Auth::user()->id == $comment->user_id) || (Auth::user()->admin == 'true'))
+                                <a href="{{ route('delete_comment', [
+                                        'comment_id' => $comment->id
+                                    ]) }}">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                            @endif
+                        @endauth
+
+                    </small></h6>
                     <hr>
                     <p id=comment-text class="card-text">{{ $comment->comment }}</p>
 

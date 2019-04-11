@@ -10709,7 +10709,7 @@ left-nav {
 }
 #subtitle{
   margin: 0;
-  padding-tword-breakop: 2em;
+  padding-top: 2em;
   color: white;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.7);
   font-size: 1.5em;
@@ -10843,3 +10843,5 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+

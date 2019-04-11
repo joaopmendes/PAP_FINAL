@@ -47,10 +47,9 @@
                         @endforeach
                 </tbody>
             </table>
-            <div class="justify-content-center">
-                {!! $blogPosts->links() !!}
-
-        </div>
+            <div id="links">
+                {{  $blogPosts->links() }}
+            </div>
     </div>
 
 @endsection

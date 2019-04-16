@@ -10845,3 +10845,100 @@ main{
 }
 
 
+/* CONTACT PAGE */
+
+#contactos_header{
+    background: url(../img/contact_img.jpg);
+    background-size: cover;
+}
+
+.offuscate-20{
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+.contact-margin-right{
+    margin-right: 10em;
+}
+.contact-margin-right > h1{
+    text-align: right;
+    color: white;
+    margin:0;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    font-size: 2em;
+    text-shadow: 1px 1px black;
+
+}
+.contact-margin-right > p{
+    color: white;
+    margin-left: 10em;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    text-shadow: 1px 1px black;
+}
+
+#info-company{
+    width: auto;
+    height: auto;
+    margin-top: 2em;
+}
+#contacto > h5 {
+    margin-bottom: 24px;
+}
+
+.info-group > *{
+    text-align: center;
+    color: black;
+}
+.info-group > h5 {
+    font-size: 1.4em;
+}
+.info-group > p{
+    text-align: center;
+    color: rgb(64, 66, 68) ;
+}
+
+.width-50{
+    width: 50%;
+}
+.padding-right-7{
+    padding-right: 7em;
+}
+.padding-right-3{
+    padding-right: 3em;
+}
+.padding-left-7{
+    padding-left: 7em;
+}
+.padding-left-3{
+    padding-left: 3em;
+}
+.text-black > *{
+    color: black;
+}
+
+.margin-0{
+    margin: 0;
+}
+
+
+@media (max-width: 700px){
+
+    .contact-margin-right > p{
+        display: none;
+    }
+    #contactos_header{
+        height: 20em;
+        width: 100%;
+    }
+    .contact-margin-right{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

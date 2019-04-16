@@ -48,13 +48,13 @@
 
         <div id = contacto class="info-group">
             <h5>Forma de nos contactar</h5>
-            <div class="width-50 float-left">
-                <p class="text-right padding-right-7"><strong>E-mail</strong></p>
+            <div class="text-black width-50 float-left">
+                <p id=subtitle-contact-page class="text-right padding-right-7 margin-0"><strong>E-mail</strong></p>
                 <p class="text-right padding-right-3">clinicadeser@gmail.com</p>
             </div>
-            <div class="width-50 float-left">
-                <p class="text-left padding-right-7"><strong>Telefone</strong></p>
-                <p class="text-left padding-right-3">960390340 ou 915103012</p>
+            <div class="text-black width-50 float-left">
+                <p id=subtitle-contact-page class="text-left padding-left-7 margin-0"><strong>Telefone</strong></p>
+                <p class="text-left padding-left-3">960390340 ou 915103012</p>
             </div>
         </div>
     </div>

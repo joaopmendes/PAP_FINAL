@@ -93,7 +93,7 @@
                 <li class="nav-item">
                     <a href="{{ route('login')}}" class="nav-link @if ($current == 'login')
                       active
-                    @endif">Fazer Login</a>
+                    @endif">Iniciar Sessão</a>
                 </li>
                 <li class="nav-item" id="registerButton">
                     <a href="{{route('register')}}" class="nav-link @if ($current == 'register')

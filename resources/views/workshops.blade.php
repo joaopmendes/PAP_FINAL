@@ -7,7 +7,11 @@
 
 
 @section('content')
-    @component('component.carrousel')
-        
-    @endcomponent
+    <div class="container">
+
+        @component('component.carrousel')
+
+        @endcomponent
+
+    </div>
 @endsection

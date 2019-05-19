@@ -10942,3 +10942,36 @@ main{
         align-items: center;
     }
 }
+
+
+/* WORKSHOP PAGE */
+
+
+.workshop{
+    width: 80%;
+    margin: auto;
+    box-shadow: 5px 5px 15px 5px #ddd;
+}
+
+.workshop-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workshop-image > .img-width{
+    max-width: 80%;
+    height: 150px;
+}
+
+.workshop-title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.workshop-text{
+
+}
+.workshop-price{
+
+}

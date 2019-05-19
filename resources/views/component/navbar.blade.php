@@ -98,7 +98,7 @@
                 <li class="nav-item" id="registerButton">
                     <a href="{{route('register')}}" class="nav-link @if ($current == 'register')
                       active
-                    @endif">Registar-se</a>
+                    @endif">Registar</a>
                 </li>
               </ul>
             @endguest
